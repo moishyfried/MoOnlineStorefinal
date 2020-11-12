@@ -1,0 +1,15 @@
+.featured {
+      height: 300px;
+  }
+  
+  img {
+      object-fit: cover;
+      height: 600px;
+      width: 100%;
+  } 
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }

@@ -1,0 +1,19 @@
+<div class="d-flex justify-content-center mt-5">
+      <div class="col-3">
+        <form [formGroup]="formgroup" (ngSubmit)="onsubmit()">
+          <div class="text-center mb-4">
+            <h1 class="h3 mb-3 font-weight-normal">Login</h1>
+           <div>
+            <h5 class=" mb-3 font-weight-normal">You Need To Login To Continue
+              <br> Or Dont Have A Account<button class="btn btn-link" (click)="goToRgister()">Sign Up</button> 
+            </h5> 
+           </div>
+          </div>
+          
+        <app-text-input formControlName="email" [label]="'email address'"></app-text-input>               
+        <app-text-input formControlName="password" [label]="'password'" [type]="'password'"></app-text-input>               
+  
+          <button [disabled]="this.formgroup.invalid" class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        </form>
+      </div>
+    </div>    

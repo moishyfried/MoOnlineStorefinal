@@ -1,0 +1,26 @@
+<div class="container mt-5">
+      <div class="row">
+          <div class="col-8">
+        <app-stepper [linermodeselected]="true" #appStepper>
+            <cdk-step [label]="'address'" [completed]="(checkoutform.get('addressform').valid)">
+                <app-checkout-address [checoutform]="checkoutform" ></app-checkout-address>
+            </cdk-step>
+            <cdk-step [label]="'Delivery'" [completed]="(checkoutform.get('deliveryform').valid)">
+                 <app-checkout-delivery [checkoutform]="checkoutform"> </app-checkout-delivery>
+            </cdk-step> 
+            <cdk-step [label]="'Review'">
+                <app-checkout-review [appstepper]="appStepper"></app-checkout-review>
+            </cdk-step> <cdk-step [label]="'payment'">
+                <app-checkout-payment [checkOutForm]="checkoutform"></app-checkout-payment>
+            </cdk-step>
+        </app-stepper>        
+          </div>
+          <div class="col-4">
+              <app-ordertotal
+              [total]="(basketTotals$ | async).TotalPrice"
+              [subtotal]="(basketTotals$ | async).SubTotal"
+              [shippingPrice]="(basketTotals$ | async).Shipping"
+              ></app-ordertotal> 
+          </div>
+</div>
+</div>

@@ -1,0 +1,14 @@
+<div class=" container ">
+      <div class=" row ">
+            <div class=" col-8 ">
+                  <app-order-summary [items]="order" [isorder]="true" [isbasket]="false"></app-order-summary>
+            </div>
+            <div class="col-4">
+                  <app-ordertotal
+                  [total]="total"
+                  [subtotal]="subtotal"
+                  [shippingPrice]="shipping"
+                  ></app-ordertotal>
+            </div>
+      </div>
+</div>

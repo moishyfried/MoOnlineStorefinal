@@ -1,0 +1,18 @@
+<div class="d-flex justify-content-center mt-5">
+      <div class="col-3">
+        <form [formGroup]="formgroup" >
+          <div class="text-center mb-4">
+            <h1 class="h3 mb-3 font-weight-normal">Contact</h1>
+          </div>
+        <app-text-input formControlName="name" [label]="'Name'"></app-text-input>    
+        <app-text-input formControlName="emailAddress" [label]="'email address'"></app-text-input>               
+        <app-text-input formControlName="phoneNumber" [label]="'Phone Number'" ></app-text-input>   
+        <app-text-erea formControlName="message" [label]="'message'"></app-text-erea>            
+        
+          
+          <button (click)="SendContactMessage()" [disabled]="this.formgroup.invalid" class="btn btn-lg btn-primary btn-block" type="submit">Contact</button>
+        </form>
+      </div>
+    </div> 
+
+   
